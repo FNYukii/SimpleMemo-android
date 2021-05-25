@@ -5,6 +5,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import io.realm.Realm
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //ボタンの色を変更
-        floatingBtn.setColorFilter(Color.parseColor("#777777"))
+        makeBtn.setColorFilter(Color.parseColor("#777777"))
         //ステータスバーとナビゲーションバーを透過
         window.apply {
             decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         //Realmのインスタンスを取得
         realm = Realm.getDefaultInstance()
         //floating button listener
-        floatingBtn.setOnClickListener {
+        makeBtn.setOnClickListener {
             val intent = Intent(this, EditActivity::class.java)
             startActivity(intent)
         }
@@ -59,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         //close Realm
     }
+
 
 
 

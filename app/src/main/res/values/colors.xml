@@ -11,5 +11,6 @@
     <color name="dark">#333333</color>
     <color name="transparent">#00000000</color>
     <color name="translucentWhite">#7EFFFFFF</color>
+    <color name="translucentBlack">#27333333</color>
     <color name="lightGray">#eeeeee</color>
 </resources>

@@ -4,7 +4,7 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/translucentWhite</item>
-        <item name="colorOnPrimary">@color/dark</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
@@ -17,19 +17,12 @@
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowLightStatusBar">true</item>
-<!--         <item name="android:windowTranslucentStatus">true</item>-->
-        <item name="android:statusBarColor">@color/translucentWhite</item>
 
         <!-- NavigationBar -->
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowLightNavigationBar">true</item>
 
-
-
-
-
     </style>
-
 
     <style name="EditTextColorControl">
         <item name="colorControlNormal">@android:color/darker_gray</item>
@@ -37,6 +30,11 @@
     </style>
 
 
+    <color name="background">#FFFFFF</color>
+    <color name="cardBackgroundDefault">#FFFFFF</color>
+    <color name="cardBackgroundPressed">#DDDDDD</color>
+    <color name="buttonBackgroundDefault">#FFFFFF</color>
+    <color name="buttonBackgroundPressed">#DDDDDD</color>
 
 
 </resources>

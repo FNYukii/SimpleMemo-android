@@ -1,11 +1,8 @@
 package com.example.y.simplememo
 
 import android.app.Application
-import android.graphics.Color
-import android.view.View
 import io.realm.Realm
 import io.realm.RealmConfiguration
-import kotlinx.android.synthetic.main.activity_main.*
 
 class CustomApplication : Application() {
     override fun onCreate() {

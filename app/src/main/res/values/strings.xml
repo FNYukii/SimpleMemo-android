@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Simple Memo</string>
     <string name="please_white_memo_text">メモを入力</string>
+    <string name="back_button_text">戻るボタン</string>
+    <string name="delete_button_text">削除ボタン</string>
+    <string name="make_button_text">作成ボタン</string>
 </resources>
