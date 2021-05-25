@@ -30,8 +30,8 @@
     </style>
 
     <color name="background">#333333</color>
-    <color name="cardBackgroundDefault">#555555</color>
-    <color name="cardBackgroundPressed">#444444</color>
+    <color name="cardBackgroundDefault">#444444</color>
+    <color name="cardBackgroundPressed">#666666</color>
     <color name="buttonBackgroundDefault">#333333</color>
     <color name="buttonBackgroundPressed">#555555</color>
 
