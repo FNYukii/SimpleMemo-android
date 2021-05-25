@@ -10,15 +10,32 @@ import java.text.FieldPosition
 class CustomRecyclerViewAdapter(realmResults: RealmResults<Memo>): RecyclerView.Adapter<ViewHolder>(){
 
     private val rResults: RealmResults<Memo> = realmResults
+    private var isFirstView = true
 
 
     //新しいViewを生成するonCreateViewHolderメソッド
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): ViewHolder {
-        //parentがRecyclerViewのone_resultを生成。
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.one_memo, parent, false)
-        //できたViewを引数にViewHolderオブジェクトを生成。
-        return ViewHolder(view)
+
+        if (isFirstView){
+            //parentがRecyclerViewのfirst_memoを生成。
+            val view = LayoutInflater.from(parent.context)
+                .inflate(R.layout.first_memo, parent, false)
+            isFirstView = false
+            //できたViewを引数にViewHolderオブジェクトを生成。
+            return ViewHolder(view)
+        } else {
+            //parentがRecyclerViewのone_memoを生成。
+            val view = LayoutInflater.from(parent.context)
+                .inflate(R.layout.one_memo, parent, false)
+            //できたViewを引数にViewHolderオブジェクトを生成。
+            return ViewHolder(view)
+        }
+
+
+
+
+
+
     }
 
 
