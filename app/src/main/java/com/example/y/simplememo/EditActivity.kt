@@ -1,9 +1,12 @@
 package com.example.y.simplememo
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MotionEvent
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import io.realm.Realm
 import io.realm.kotlin.createObject
@@ -28,6 +31,11 @@ class EditActivity : AppCompatActivity() {
         window.apply {
             decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         }
+
+
+
+
+
 
         //get Realm instance
         realm = Realm.getDefaultInstance()
@@ -60,6 +68,10 @@ class EditActivity : AppCompatActivity() {
         deleteBtn.setOnClickListener {
             deleteMemo()
         }
+
+
+
+
 
     }
 
@@ -127,6 +139,9 @@ class EditActivity : AppCompatActivity() {
         super.onDestroy()
         realm.close()
     }
+
+
+
 
 
 
