@@ -1,8 +1,10 @@
 package com.example.y.simplememo
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import io.realm.Realm
@@ -22,6 +24,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //コンポーネントの色を変更
+        floatingBtn.setColorFilter(Color.parseColor("#777777"))
+
+        //ステータスバーの背後にもViewを配置
+        window.apply {
+            decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        }
+
+
         //Realmのインスタンスを取得
         realm = Realm.getDefaultInstance()
         //floating button listener

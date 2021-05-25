@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dark">#333333</color>
     <color name="memo_card_color">#B5E485</color>
+    <color name="translucentWhite">#80FFFFFF</color>
 </resources>
