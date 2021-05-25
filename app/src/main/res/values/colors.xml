@@ -9,6 +9,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="dark">#333333</color>
-    <color name="translucentWhite">#80EEEEEE</color>
+    <color name="translucentWhite">#9FFFFFFF</color>
     <color name="lightGray">#eeeeee</color>
 </resources>

@@ -18,7 +18,7 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowLightStatusBar">true</item>
 <!--         <item name="android:windowTranslucentStatus">true</item>-->
-<!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
+        <item name="android:statusBarColor">@color/translucentWhite</item>
 
         <!-- NavigationBar -->
         <item name="android:navigationBarColor">@android:color/transparent</item>
