@@ -2,6 +2,9 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
 
+    //For using Kotlin syntax support
+    id 'kotlin-android-extensions'
+
     //For using realm
     id 'kotlin-kapt'
     id 'realm-android'

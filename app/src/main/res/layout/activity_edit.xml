@@ -7,19 +7,20 @@
     tools:context=".EditActivity">
 
     <EditText
-        android:id="@+id/memoEdit"
-
-        android:theme="@style/EditTextColorControl"
+        android:id="@+id/contentEdit"
 
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="@string/please_white_memo_text"
         android:inputType="textMultiLine"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:theme="@style/EditTextColorControl"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
