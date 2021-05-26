@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
@@ -23,6 +24,8 @@ class EditActivity : AppCompatActivity() {
 
     //よく使うidを宣言
     private var id : Long = 0
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,7 +76,7 @@ class EditActivity : AppCompatActivity() {
             deleteMemo()
         }
 
-
+        //contentEditが編集された
         contentEdit.addTextChangedListener {
             if(contentEdit.text.isNullOrEmpty()){
                 deleteBtn.visibility = View.INVISIBLE
@@ -151,6 +154,7 @@ class EditActivity : AppCompatActivity() {
         super.onDestroy()
         realm.close()
     }
+
 
 
 
