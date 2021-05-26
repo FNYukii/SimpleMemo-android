@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
 
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
@@ -14,32 +13,31 @@
         android:id="@+id/contentEdit"
 
         android:layout_width="match_parent"
-        android:background="@color/transparent"
-
-        android:textSelectHandle="@color/transparent"
-
-
         android:layout_height="wrap_content"
+
         android:layout_marginStart="16dp"
+
+
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:autofillHints=""
+        android:background="@color/transparent"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/please_white_memo_text"
         android:inputType="textMultiLine"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSelectHandle="@color/transparent"
         android:theme="@style/EditTextColorControl"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backBtn"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/backBtn" />
 
     <ImageButton
         android:id="@+id/backBtn"
-        android:focusableInTouchMode="true"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginTop="64dp"
@@ -58,6 +56,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/backBtn"
         app:srcCompat="@drawable/baseline_delete_24" />
+
+    <ImageButton
+        android:id="@+id/hidden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        app:layout_constraintStart_toEndOf="@+id/backBtn"
+        app:layout_constraintTop_toTopOf="@+id/backBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

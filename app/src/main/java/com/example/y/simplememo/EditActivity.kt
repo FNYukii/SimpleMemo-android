@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import io.realm.Realm
 import io.realm.kotlin.createObject
@@ -88,10 +89,12 @@ class EditActivity : AppCompatActivity() {
                 isEditing = true
                 contentEdit.requestFocus()
                 imm.showSoftInput(contentEdit, 0)
+                Toast.makeText(applicationContext,"open",Toast.LENGTH_SHORT).show()
             }else{
                 isEditing = false
-                backBtn.requestFocus()
+                hidden.requestFocus()
                 imm.hideSoftInputFromWindow(contentEdit.windowToken, 0)
+                Toast.makeText(applicationContext,"close",Toast.LENGTH_SHORT).show()
             }
 
         }
