@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
@@ -57,13 +56,16 @@
         app:layout_constraintTop_toTopOf="@+id/backBtn"
         app:srcCompat="@drawable/baseline_delete_24" />
 
-    <ImageButton
-        android:id="@+id/hidden"
+    <ImageView
+        android:id="@+id/hiddenImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:focusableInTouchMode="true"
+        android:src="@color/background"
         app:layout_constraintStart_toEndOf="@+id/backBtn"
-        app:layout_constraintTop_toTopOf="@+id/backBtn" />
+        app:layout_constraintTop_toTopOf="@+id/backBtn"
+         />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -89,12 +89,12 @@ class EditActivity : AppCompatActivity() {
                 isEditing = true
                 contentEdit.requestFocus()
                 imm.showSoftInput(contentEdit, 0)
-                Toast.makeText(applicationContext,"open",Toast.LENGTH_SHORT).show()
+//                Toast.makeText(applicationContext,"open",Toast.LENGTH_SHORT).show()
             }else{
                 isEditing = false
-                hidden.requestFocus()
+                hiddenImageView.requestFocus()
                 imm.hideSoftInputFromWindow(contentEdit.windowToken, 0)
-                Toast.makeText(applicationContext,"close",Toast.LENGTH_SHORT).show()
+//                Toast.makeText(applicationContext,"close",Toast.LENGTH_SHORT).show()
             }
 
         }
