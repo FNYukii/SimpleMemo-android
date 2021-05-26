@@ -4,10 +4,6 @@
 
     <application
         android:name=".CustomApplication"
-        android:windowSoftInputMode="stateVisible"
-        android:fitsSystemWindows="true"
-
-
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
