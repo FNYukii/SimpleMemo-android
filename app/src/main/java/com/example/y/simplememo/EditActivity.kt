@@ -90,14 +90,11 @@ class EditActivity : AppCompatActivity() {
                 imm.showSoftInput(contentEdit, 0)
             }else{
                 isEditing = false
-                backBtn.requestFocus()
+//                backBtn.requestFocus()
                 imm.hideSoftInputFromWindow(contentEdit.windowToken, 0)
             }
 
-
         }
-
-
 
 
     }
