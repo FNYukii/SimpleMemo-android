@@ -23,7 +23,7 @@
         android:gravity="start|top"
         android:hint="@string/please_white_memo_text"
         android:inputType="textMultiLine"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:theme="@style/EditTextColorControl"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

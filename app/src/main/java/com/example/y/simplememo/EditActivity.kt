@@ -9,6 +9,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.core.widget.addTextChangedListener
 import io.realm.Realm
 import io.realm.kotlin.createObject
 import io.realm.kotlin.where
@@ -60,7 +61,7 @@ class EditActivity : AppCompatActivity() {
 
         //click save button
         backBtn.setOnClickListener {
-            if(contentEdit.text.isNotBlank() && contentEdit.text.isNotEmpty()){
+            if(!contentEdit.text.isNullOrEmpty()){
                 saveMemo()
             } else {
                 deleteMemo()
@@ -73,6 +74,14 @@ class EditActivity : AppCompatActivity() {
         }
 
 
+        contentEdit.addTextChangedListener {
+            if(contentEdit.text.isNullOrEmpty()){
+                deleteBtn.visibility = View.INVISIBLE
+            } else {
+                deleteBtn.visibility = View.VISIBLE
+            }
+        }
+
 
 
 
@@ -84,7 +93,7 @@ class EditActivity : AppCompatActivity() {
         var content: String = ""
 
         //contentEditのtextがnullでも空でも空白でもないなら、変数contentに格納
-        if(!contentEdit.text.isNullOrEmpty() && contentEdit.text.isNotBlank()){
+        if(!contentEdit.text.isNullOrEmpty()){
             content = contentEdit.text.toString()
         }
 
@@ -142,6 +151,9 @@ class EditActivity : AppCompatActivity() {
         super.onDestroy()
         realm.close()
     }
+
+
+
 
 
 

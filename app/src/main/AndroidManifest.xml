@@ -4,8 +4,11 @@
 
     <application
         android:name=".CustomApplication"
+        android:windowSoftInputMode="stateVisible"
+        android:fitsSystemWindows="true"
+
+
         android:allowBackup="true"
-        android:windowSoftInputMode="stateAlwaysVisible"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"

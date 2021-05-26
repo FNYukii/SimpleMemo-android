@@ -18,10 +18,10 @@ CustomRecyclerViewAdapter(realmResults: RealmResults<Memo>): RecyclerView.Adapte
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): ViewHolder {
 
         if (isFirstView){
+            isFirstView = false
             //parentがRecyclerViewのfirst_memoを生成。
             val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.first_memo, parent, false)
-            isFirstView = false
             //できたViewを引数にViewHolderオブジェクトを生成。
             return ViewHolder(view)
         } else {
