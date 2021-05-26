@@ -30,11 +30,16 @@
     </style>
 
 
+    <!-- theme -->
     <color name="background">#FFFFFF</color>
-    <color name="cardBackgroundDefault">#FFFFFF</color>
-    <color name="cardBackgroundPressed">#DDDDDD</color>
-    <color name="buttonBackgroundDefault">#FFFFFF</color>
-    <color name="buttonBackgroundPressed">#DDDDDD</color>
+    <color name="cardDefault">#FFFFFF</color>
+    <color name="cardPressed">#DDDDDD</color>
+
+    <color name="transparentButtonDefault">#00000000</color>
+    <color name="transparentButtonPressed">#33000000</color>
+
+    <color name="floatingButtonDefault">#FFFFFF</color>
+    <color name="floatingButtonPressed">#DDDDDD</color>
 
 
 </resources>

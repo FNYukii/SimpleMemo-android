@@ -104,7 +104,7 @@ class EditActivity : AppCompatActivity() {
                 memo.content = content
             }
             //Toast
-            Toast.makeText(applicationContext, "新しいメモを保存しました。", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(applicationContext, "新しいメモを保存しました。", Toast.LENGTH_SHORT).show()
         }
 
         //レコードを更新
@@ -117,7 +117,7 @@ class EditActivity : AppCompatActivity() {
                 memo?.content = content
             }
             //Toast
-            Toast.makeText(applicationContext, "メモを更新しました。", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(applicationContext, "メモを更新しました。", Toast.LENGTH_SHORT).show()
         }
 
         finish()
@@ -133,7 +133,7 @@ class EditActivity : AppCompatActivity() {
             memo?.deleteFromRealm()
         }
         //Toast
-        Toast.makeText(applicationContext, "メモを削除しました。", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(applicationContext, "メモを削除しました。", Toast.LENGTH_SHORT).show()
         finish()
     }
 

@@ -28,16 +28,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //ボタンの色を変更
-        makeBtn.setColorFilter(Color.parseColor("#777777"))
+
 
         //statusBarとnavigationBarのテーマ切り替え
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && resources.configuration.isNightModeActive) {
             //dark theme
             window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            //makeBtnの色を変更
+            makeBtn.setColorFilter(Color.parseColor("#AAAAAA"))
         } else {
             //light theme
             window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+            //makeBtnの色を変更
+            makeBtn.setColorFilter(Color.parseColor("#777777"))
         }
 
 
