@@ -1,6 +1,7 @@
 package com.example.y.simplememo
 
 import android.content.Context
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -34,6 +35,18 @@ class EditActivity : AppCompatActivity() {
 
 
 
+        //statusBarとnavigationBarのテーマ切り替え
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && resources.configuration.isNightModeActive) {
+            //dark theme
+            window.apply {
+                decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            }
+        } else {
+            //light theme
+            window.apply {
+                decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            }
+        }
 
 
 
@@ -101,7 +114,7 @@ class EditActivity : AppCompatActivity() {
                 memo.content = content
             }
             //Toast
-//            Toast.makeText(applicationContext, "新しいメモを保存しました。", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "新しいメモを保存しました。", Toast.LENGTH_SHORT).show()
         }
 
         //レコードを更新
@@ -114,7 +127,7 @@ class EditActivity : AppCompatActivity() {
                 memo?.content = content
             }
             //Toast
-//            Toast.makeText(applicationContext, "メモを更新しました。", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "メモを更新しました。", Toast.LENGTH_SHORT).show()
         }
 
         finish()
@@ -130,7 +143,7 @@ class EditActivity : AppCompatActivity() {
             memo?.deleteFromRealm()
         }
         //Toast
-//        Toast.makeText(applicationContext, "メモを削除しました。", Toast.LENGTH_SHORT).show()
+        Toast.makeText(applicationContext, "メモを削除しました。", Toast.LENGTH_SHORT).show()
         finish()
     }
 

@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import io.realm.RealmResults
 import java.text.FieldPosition
 
-class CustomRecyclerViewAdapter(realmResults: RealmResults<Memo>): RecyclerView.Adapter<ViewHolder>(){
+class
+CustomRecyclerViewAdapter(realmResults: RealmResults<Memo>): RecyclerView.Adapter<ViewHolder>(){
 
     private val rResults: RealmResults<Memo> = realmResults
     private var isFirstView = true
